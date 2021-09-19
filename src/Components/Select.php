@@ -8,6 +8,7 @@ use Illuminate\View\Component;
 class Select extends Component
 {
     public $name;
+    public $wiremodel;
     public $id;
     public $optionid;
     public $label;
@@ -25,6 +26,7 @@ class Select extends Component
      * @return void
      */
     public function __construct(
+        $wiremodel               = null,
         $name = null,
         $id=null,
         $optionid=null,
@@ -43,6 +45,7 @@ class Select extends Component
         elseif(!is_null($object) && is_null($options))  $this->options = $object;
 
         $this->id = $id;
+        $this->wiremodel = $wiremodel;
         $this->optionid = $optionid;
         $this->value = $value;
         $this->name = $name;

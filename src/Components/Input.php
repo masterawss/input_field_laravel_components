@@ -7,6 +7,7 @@ use Illuminate\View\Component;
 class Input extends Component
 {
     public $name;
+    public $wiremodel;
     public $label;
     public $class;
     public $post_label;
@@ -40,6 +41,7 @@ class Input extends Component
      */
     public function __construct(
         $name               = null,
+        $wiremodel               = null,
         $label              = '',
         $class              = null,
         $postLabel         = null,
@@ -68,6 +70,7 @@ class Input extends Component
         $targetModal              = null
     )
     {
+        $this->wiremodel = $wiremodel;
         $this->name = $name;
         $this->class = $class;
         $this->label = $label;
