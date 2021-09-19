@@ -2,6 +2,9 @@
     <label for="{{ $name }}" class="control-label mb-1 ">{{ $label ?? '' }} </label>
     <br>
     <select
+        @if (!is_null($wiremodel))
+        wire:model="{{ $wiremodel }}"
+        @endif
         @if (!is_null($name))
         name="{{ $name }}"
         @endif

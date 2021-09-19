@@ -6,6 +6,9 @@
             <input
                 value="{{ old($name, $value ?? $value_default ?? '') }}"
                 class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }} {{ $class ?? '' }}"
+                @if (!is_null($wiremodel))
+                wire:model="{{ $wiremodel }}"
+                @endif
                 @if (!is_null($name))
                 name="{{ $name }}"
                 @endif
