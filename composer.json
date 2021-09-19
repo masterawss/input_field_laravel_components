@@ -1,0 +1,32 @@
+{
+    "name": "master_awss/input_field_components",
+    "description": "Basic input fields components",
+    "type": "library",
+    "require": {
+        "php": "^7.3",
+        "laravel/framework": "^8.61"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MasterAWSS\\InputFieldComponents\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anthony Will Solsol Soplin",
+            "email": "masterawss@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MasterAWSS\\InputFieldComponents\\InputFieldComponentsServiceProvider"
+            ],
+            "aliases": {
+                "InputFieldComponents": "MasterAWSS\\InputFieldComponents\\InputFieldComponentsFacade"
+            }
+        }
+    }
+}
