@@ -17,10 +17,12 @@
 
         {{$option ?? ''}}
         @isset($multiple) <optgroup> @endisset
+            <option value="" >Seleccione una opción</option>
             @foreach ($options as $element)
                 @php
                     $a = old($name, $value ?? '');
                 @endphp
+
                 <option {{$a == $element[$optionid ?? 'id'] ? 'selected' : '' }} value="{{ $element[$optionid ?? 'id'] }}">{{ $element[ $descripcion ?? 'descripcion' ] }} </option>
             @endforeach
         @isset($multiple) </optgroup> @endisset
