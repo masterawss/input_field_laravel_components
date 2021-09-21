@@ -35,16 +35,13 @@ class Select extends Component
         $disabled = false,
         $descripcion = null,
         $options = null,
-        $object = null,
         $class = null,
         $extra_select = null,
         $multiple = null
     )
     {
-        if(is_null($object) && !is_null($options))      $this->options = $options;
-        elseif(!is_null($object) && is_null($options))  $this->options = $object;
-
         $this->id = $id;
+        $this->options = $options;
         $this->wiremodel = $wiremodel;
         $this->optionid = $optionid;
         $this->value = $value;
