@@ -1,4 +1,4 @@
-<div class="form-group">
+<div class="form-group" {{$wireignore ? 'wire:ignore' : ''}} >
     <label for="{{ $name }}" class="control-label mb-1 ">{{ $label ?? '' }} </label>
     <br>
     <select
@@ -22,7 +22,6 @@
                 @php
                     $a = old($name, $value ?? '');
                 @endphp
-
                 <option {{$a == $element[$optionid ?? 'id'] ? 'selected' : '' }} value="{{ $element[$optionid ?? 'id'] }}">{{ $element[ $descripcion ?? 'descripcion' ] }} </option>
             @endforeach
         @isset($multiple) </optgroup> @endisset

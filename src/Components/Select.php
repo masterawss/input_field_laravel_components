@@ -20,6 +20,8 @@ class Select extends Component
     public $value;
     public $extra_select;
     public $multiple;
+    public $wireignore;
+    public $wireignoreself;
     /**
      * Create a new component instance.
      *
@@ -37,7 +39,9 @@ class Select extends Component
         $options = null,
         $class = null,
         $extra_select = null,
-        $multiple = null
+        $multiple = null,
+        $wireignore = false,
+        $wireignoreself = false
     )
     {
         $this->id = $id;
@@ -52,6 +56,8 @@ class Select extends Component
         $this->class = $class;
         $this->extra_select = $extra_select;
         $this->multiple = $multiple;
+        $this->wireignore = $wireignore;
+        $this->wireignoreself = $wireignoreself;
     }
 
     /**
